@@ -170,6 +170,10 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/bin/vi:system/bin/vi
 
+# SuperSU
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+
 # Boot Animation
 PRODUCT_PACKAGES += \
     bootanimation.zip
