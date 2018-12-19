@@ -36,9 +36,6 @@ type Product_variables struct {
 	Device_support_legacy_hwfde struct {
 		Cflags []string
 	}
-	Device_support_wait_for_qsee struct {
-		Cflags []string
-	}
 }
 
 type ProductVariables struct {
@@ -54,5 +51,4 @@ type ProductVariables struct {
 	Device_support_hwfde       *bool `json:",omitempty"`
 	Device_support_hwfde_perf  *bool `json:",omitempty"`
 	Device_support_legacy_hwfde  *bool `json:",omitempty"`
-	Device_support_wait_for_qsee  *bool `json:",omitempty"`
 }
