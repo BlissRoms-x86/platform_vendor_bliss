@@ -16,6 +16,12 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.selinux=1
 
+# Default sounds
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.config.notification_sound=Argon.ogg \
+    ro.config.alarm_alert=Hassium.ogg \
+    ro.config.ringtone=Themos.ogg
+
 # Thank you, please drive thru!
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
 
@@ -43,12 +49,11 @@ PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/bin/blacklist:system/addon.d/blacklist \
     vendor/bliss/prebuilt/common/bin/50-bliss.sh:system/addon.d/50-bliss.sh
 
-
 ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.$
-    vendor/bliss/prebuilt/common/bin/backuptool_ab.functions:system/bin/backupt$
-    vendor/bliss/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backu$
+    vendor/bliss/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/bliss/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/bliss/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
 # Backup services whitelist
