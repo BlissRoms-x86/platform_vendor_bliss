@@ -62,9 +62,8 @@ PRODUCT_COPY_FILES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bin/sysinit:system/bin/sysinit \
-    $(LOCAL_PATH)/etc/init.d/00banner:system/etc/init.d/00banner \
-    $(LOCAL_PATH)/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/bliss/prebuilt/common/bin/sysinit:system/bin/sysinit \
+    vendor/bliss/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
 
 # Copy all Bliss-specific init rc files
     $(foreach f,$(wildcard vendor/bliss/prebuilt/common/etc/init/*.rc),\
