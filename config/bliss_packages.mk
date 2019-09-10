@@ -67,7 +67,6 @@ PRODUCT_PACKAGES += \
     AboutBliss \
     BlissStatistics \
     Contacts \
-    SafetyHubPrebuilt \
     Dialer
 
 # Accents
