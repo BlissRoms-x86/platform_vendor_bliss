@@ -131,9 +131,13 @@ DEVICE_PACKAGE_OVERLAYS += vendor/bliss/overlay/common
 -include vendor/overlays/bliss_overlays.mk
 
 # Gapps
+ifneq ($(USE_FOSS), true)
 ifeq ($(BLISS_BUILD_VARIANT), gapps)
 $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 endif
+endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
+ifneq ($(USE_FOSS), true)
 -include vendor/bliss/config/partner_gms.mk
+endif
