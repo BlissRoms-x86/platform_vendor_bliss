@@ -137,11 +137,6 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/bliss/overlay
 -include vendor/overlays/bliss_overlays.mk
 
 # Gapps
-ifneq ($(USE_FOSS), true)
-ifeq ($(BLISS_BUILD_VARIANT), gapps)
-$(call inherit-product, vendor/gapps/common/common-vendor.mk)
-endif
-endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 ifneq ($(USE_FOSS), true)
