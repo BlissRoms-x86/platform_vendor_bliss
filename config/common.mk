@@ -67,8 +67,8 @@ PRODUCT_COPY_FILES += \
     vendor/bliss/config/permissions/org.lineageos.android.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.lineageos.android.xml
 
 # Enforce privapp-permissions whitelist
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.control_privapp_permissions=enforce
+#~ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+#~     ro.control_privapp_permissions=enforce
 
 # Include AOSP audio files
 include vendor/bliss/config/aosp_audio.mk
@@ -137,9 +137,13 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/bliss/overlay
 -include vendor/overlays/bliss_overlays.mk
 
 # Gapps
+ifneq ($(USE_FOSS), true)
 ifeq ($(BLISS_BUILD_VARIANT), gapps)
 $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 endif
+endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
+ifneq ($(USE_FOSS), true)
 -include vendor/bliss/config/partner_gms.mk
+endif
