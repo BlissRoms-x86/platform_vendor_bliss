@@ -40,7 +40,7 @@
 
 BUILD_TOP := $(shell pwd)
 
-TARGET_AUTO_KDIR := $(shell echo $(TARGET_DEVICE_DIR) | sed -e 's/^device/kernel/g')
+TARGET_AUTO_KDIR := kernel
 TARGET_KERNEL_SOURCE ?= $(TARGET_AUTO_KDIR)
 ifneq ($(TARGET_PREBUILT_KERNEL),)
 TARGET_KERNEL_SOURCE :=
