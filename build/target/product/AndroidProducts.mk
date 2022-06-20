@@ -18,10 +18,10 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/bliss_arm.mk \
     $(LOCAL_DIR)/bliss_arm64.mk \
     $(LOCAL_DIR)/bliss_x86.mk \
-    $(LOCAL_DIR)/bliss_x86_64.mk
+    $(LOCAL_DIR)/bliss_x86_64_generic.mk
 
 COMMON_LUNCH_CHOICES := \
     bliss_arm-userdebug \
     bliss_arm64-userdebug \
     bliss_x86-userdebug \
-    bliss_x86_64-userdebug
+    bliss_x86_64_generic-userdebug
