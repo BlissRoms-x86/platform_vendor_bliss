@@ -167,6 +167,14 @@ ifeq ($(BLISS_BUILD_VARIANT), foss)
 $(call inherit-product, vendor/foss/foss.mk)
 endif
 
+# OpenGapps
+ifeq ($(BLISS_BUILD_VARIANT), opengapps)
+GAPPS_VARIANT := pico
+GAPPS_EXCLUDED_PACKAGES := ActionsServices \
+                           SetupWizard
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+endif
+
 # Go-gapps
 ifeq ($(BLISS_BUILD_VARIANT), goapps)
 $(call inherit-product, vendor/gapps-go/gapps-go.mk)
