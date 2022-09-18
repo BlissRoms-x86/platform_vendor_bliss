@@ -170,6 +170,8 @@ endif
 # OpenGapps
 ifeq ($(BLISS_BUILD_VARIANT), opengapps)
 GAPPS_VARIANT := pico
+GAPPS_FORCE_WEBVIEW_OVERRIDES := true
+GAPPS_PRODUCT_PACKAGES += talkback
 GAPPS_EXCLUDED_PACKAGES := ActionsServices \
                            SetupWizard
 $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
