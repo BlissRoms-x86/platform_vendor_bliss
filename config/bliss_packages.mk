@@ -3,7 +3,7 @@ PRODUCT_PACKAGES += \
     apns-conf.xml
 
 # AOSP packages
-ifeq ($(BLISS_BUILD_VARIANT), vanilla)
+ifneq ($(GAPPS_VARIANT), stock)
 PRODUCT_PACKAGES += \
     Contacts \
     Dialer \
@@ -11,8 +11,7 @@ PRODUCT_PACKAGES += \
     Etar \
     ExactCalculator \
     Exchange2 \
-    messaging \
-    SimpleGalleryPro
+    messaging
 endif
 
 # Bliss Packages
@@ -71,6 +70,13 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs
 
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/fsck.ntfs \
+    system/bin/mkfs.ntfs \
+    system/bin/mount.ntfs \
+    system/%/libfuse-lite.so \
+    system/%/libntfs-3g.so
+    
 # Openssh
 PRODUCT_PACKAGES += \
     scp \
