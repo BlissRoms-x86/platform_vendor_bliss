@@ -172,13 +172,7 @@ PRODUCT_COPY_FILES += \
 
 # Gapps
 ifeq ($(BLISS_BUILD_VARIANT), gapps)
-ifeq ($(TARGET_ARCH),x86_64)
 $(call inherit-product, vendor/gapps/x86_64/x86_64-vendor.mk)
-else ifeq ($(TARGET_ARCH),x86)
-$(call inherit-product, vendor/gapps/x86_64/x86-vendor.mk)
-else
-$(call inherit-product, vendor/gms/products/gms.mk)
-endif
 endif
 
 # Plugins
