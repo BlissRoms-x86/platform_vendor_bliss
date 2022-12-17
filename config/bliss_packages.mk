@@ -17,6 +17,17 @@ PRODUCT_PACKAGES += \
 	SimpleCalendar
 endif
 
+ifeq ($(BLISS_BUILD_VARIANT), foss)
+PRODUCT_PACKAGES += \
+    Contacts \
+    Dialer \
+    Etar \
+    ExactCalculator \
+    Exchange2 \
+    messaging \
+    SimpleGalleryPro
+endif
+
 # Bliss Packages
 PRODUCT_PACKAGES += \
     DeskClock \
