@@ -43,7 +43,7 @@ endif
 ifdef BLISS_RELEASE
     BLISS_BUILD_ZIP := Bliss-v$(VERSION)
 else
-    BLISS_BUILD_ZIP := Bliss-v$(VERSION)-$(BLISS_BUILD)-$(BLISS_BUILDTYPE)-$(BLISS_BUILD_VARIANT)-$(shell date +%Y%m%d)
+    BLISS_BUILD_ZIP := Bliss-v$(VERSION)-$(BLISS_BUILD)-$(BLISS_BUILDTYPE)$(BLISS_SPECIAL_VARIANT)-$(BLISS_BUILD_VARIANT)-$(shell date +%Y%m%d)
 endif
 
 # Set Security Patch Level
