@@ -13,10 +13,7 @@ PRODUCT_PACKAGES += \
     Etar \
     ExactCalculator \
     Exchange2 \
-    messaging \
-    SimpleGalleryPro \
-	SimpleCalculator \
-	SimpleCalendar
+    messaging
 endif
 
 ifeq ($(BLISS_BUILD_VARIANT), foss)
@@ -26,8 +23,7 @@ PRODUCT_PACKAGES += \
     Etar \
     ExactCalculator \
     Exchange2 \
-    messaging \
-    SimpleGalleryPro
+    messaging
 endif
 
 else
