@@ -1,6 +1,8 @@
 # World APN list
 PRODUCT_PACKAGES += \
     apns-conf.xml
+# Minimal added packages option
+ifneq ($(BLISS_SUPER_VANILLA), true)
 
 # AOSP packages
 ifeq ($(BLISS_BUILD_VARIANT), vanilla)
@@ -26,6 +28,16 @@ PRODUCT_PACKAGES += \
     Exchange2 \
     messaging \
     SimpleGalleryPro
+endif
+
+else
+
+PRODUCT_PACKAGES += \
+    Contacts \
+    Dialer \
+    SimpleGalleryPro
+
+# END Minimal added packages
 endif
 
 # Bliss Packages
