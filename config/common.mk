@@ -172,7 +172,7 @@ PRODUCT_COPY_FILES += \
     vendor/bliss/config/permissions/privapp-permissions-omadm.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-omadm.xml
 
 # Bliss Bootanimation
--include vendor/bliss/config/bootanimation.mk
+# -include vendor/bliss/config/bootanimation.mk
 
 # Bliss Versioning System
 -include vendor/bliss/config/versions.mk
