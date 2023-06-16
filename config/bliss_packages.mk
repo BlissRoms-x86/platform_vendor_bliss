@@ -32,10 +32,10 @@ endif
 
 else
 
-PRODUCT_PACKAGES += \
-    Contacts \
-    Dialer \
-    SimpleGalleryPro
+# PRODUCT_PACKAGES += \
+#     Contacts \
+#     Dialer \
+#     SimpleGalleryPro
 
 # END Minimal added packages
 endif
@@ -47,13 +47,10 @@ PRODUCT_PACKAGES += \
     Recorder \
     LineageParts \
     LineageSettingsProvider \
-    Phonograph \
     Profiles \
     BlissUpdater \
     Seedvault \
-    WallpaperPicker2 \
     OmniStyle \
-    AboutBliss \
     GameSpace \
     OmniJaws
 
@@ -114,6 +111,5 @@ PRODUCT_PACKAGES += \
 # Live Wallpapers
 PRODUCT_PACKAGES += \
     LiveWallpapers \
-    LiveWallpapersPicker \
     VisualizationWallpapers \
     librs_jni
