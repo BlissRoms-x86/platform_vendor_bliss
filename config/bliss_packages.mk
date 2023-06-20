@@ -7,32 +7,24 @@ ifneq ($(BLISS_SUPER_VANILLA), true)
 # AOSP packages
 ifeq ($(BLISS_BUILD_VARIANT), vanilla)
 PRODUCT_PACKAGES += \
-    Contacts \
-    Dialer \
-    Email \
     Etar \
-    ExactCalculator \
     Exchange2 \
     messaging \
-    SimpleGalleryPro \
-	SimpleCalculator \
-	SimpleCalendar
+
 endif
 
 ifeq ($(BLISS_BUILD_VARIANT), foss)
 PRODUCT_PACKAGES += \
-    Contacts \
-    Dialer \
     Etar \
-    ExactCalculator \
     Exchange2 \
     messaging \
-    SimpleGalleryPro
+
 endif
 
 else
 
-# PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
+    htop \
 #     Contacts \
 #     Dialer \
 #     SimpleGalleryPro
@@ -42,7 +34,6 @@ endif
 
 # Bliss Packages
 PRODUCT_PACKAGES += \
-    DeskClock \
     LatinIME \
     Recorder \
     LineageParts \
