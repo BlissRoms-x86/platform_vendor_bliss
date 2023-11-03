@@ -28,17 +28,23 @@ endif
 
 else
 
+ifneq ($(BLISS_MINIMAL_PACKAGES), true)
 PRODUCT_PACKAGES += \
     Contacts \
     Dialer \
     SimpleGalleryPro
 
-# END Minimal added packages
-endif
-
 # Bliss Packages
 PRODUCT_PACKAGES += \
     DeskClock \
+    WallpaperPicker2
+
+endif # BLISS_MINIMAL_PACKAGES
+
+endif # BLISS_SUPER_VANILLA
+
+# Bliss Packages
+PRODUCT_PACKAGES += \
     LatinIME \
     Recorder \
     LineageParts \
@@ -46,7 +52,6 @@ PRODUCT_PACKAGES += \
     Profiles \
     BlissUpdater \
     Seedvault \
-    WallpaperPicker2 \
     OmniStyle \
     GameSpace \
     OmniJaws
