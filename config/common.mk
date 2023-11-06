@@ -186,6 +186,10 @@ PRODUCT_COPY_FILES += \
 # Bliss Overlays
 -include vendor/overlays/bliss_overlays.mk
 
+# Dex preopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+
 # Gapps
 ifeq ($(BLISS_BUILD_VARIANT), gapps)
 $(call inherit-product, vendor/gapps/x86_64/x86_64-vendor.mk)
