@@ -153,7 +153,7 @@ PRODUCT_PACKAGES += \
     StitchImage
 
 # Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= true
+# TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
 PRODUCT_PACKAGES += \
     FaceUnlockService
