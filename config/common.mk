@@ -21,10 +21,6 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
-# Enable one-handed mode
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.support_one_handed_mode=true
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
