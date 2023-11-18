@@ -221,3 +221,15 @@ ifeq ($(TARGET_SUPPORTS_QUICK_TAP),true)
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/etc/sysconfig/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
 endif
+
+ifneq ($(BLISS_PRODUCTION_BUILD),true)
+# Watermark for Bliss Bass test builds
+# Fields are:
+# text%fontsize%deltax%deltay%shadowcolor%color%shadowradius%shadowdx%shadowdy
+# For more info, see:
+# frameworks/base/services/core/java/com/android/server/wm/Watermark.java
+# and to configure the watermark, see:
+# vendor/bliss/config/watermark/create_watermark/README.md (access required)
+PRODUCT_COPY_FILES += \
+    vendor/bliss/config/watermark/watermark.conf:system/etc/setup.conf
+endif
