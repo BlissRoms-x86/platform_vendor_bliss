@@ -26,7 +26,6 @@ PRODUCT_PACKAGES += \
     BlissUpdater \
     Seedvault \
     WallpaperPicker2 \
-    Flipendo \
     OmniStyle \
     AboutBliss \
     SoftAPManager \
