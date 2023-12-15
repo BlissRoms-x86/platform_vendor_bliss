@@ -111,3 +111,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     VisualizationWallpapers \
     librs_jni
+
+# Bliss Ethernet Manager
+PRODUCT_PACKAGES += \
+    BlissEthernetManagerApp
