@@ -8,7 +8,10 @@ PRODUCT_PACKAGES += \
 
 # Telephony packages
 PRODUCT_PACKAGES += \
-    Stk
+    Stk \
+    Contacts \
+    Dialer \
+    messaging
 
 # Default ringtone
 PRODUCT_PRODUCT_PROPERTIES += \

@@ -1,37 +1,21 @@
-# World APN list
-PRODUCT_PACKAGES += \
-    apns-conf.xml
 # Minimal added packages option
 ifneq ($(BLISS_SUPER_VANILLA), true)
 
 # AOSP packages
 ifeq ($(BLISS_BUILD_VARIANT), vanilla)
 PRODUCT_PACKAGES += \
-    Contacts \
-    Dialer \
     Email \
     Etar \
     ExactCalculator \
-    Exchange2 \
-    messaging
+    Exchange2
 endif
 
 ifeq ($(BLISS_BUILD_VARIANT), foss)
 PRODUCT_PACKAGES += \
-    Contacts \
-    Dialer \
     Etar \
     ExactCalculator \
-    Exchange2 \
-    messaging
+    Exchange2
 endif
-
-else
-
-PRODUCT_PACKAGES += \
-    Contacts \
-    Dialer \
-    SimpleGalleryPro
 
 # END Minimal added packages
 endif
@@ -94,10 +78,6 @@ PRODUCT_PACKAGES += \
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
     procmem
-
-# Telephony packages
-PRODUCT_PACKAGES += \
-    Stk
 
 # Themes
 PRODUCT_PACKAGES += \
