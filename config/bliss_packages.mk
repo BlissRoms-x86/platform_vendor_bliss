@@ -17,6 +17,7 @@ endif
 # Bliss Packages
 PRODUCT_PACKAGES += \
     DeskClock \
+    Gallery2 \
     LatinIME \
     Recorder \
     LineageParts \
