@@ -188,7 +188,14 @@ PRODUCT_COPY_FILES += \
 
 # Gapps
 ifeq ($(BLISS_BUILD_VARIANT), gapps)
+# Only support generic x86/x86_64, if you use custom target specify on your own
+ifneq ($(filter %x86_64 %x86_64_generic,$(TARGET_PRODUCT)),)
 $(call inherit-product, vendor/gapps/x86_64/x86_64-vendor.mk)
+else ifneq ($(filter %x86 %x86_generic,$(TARGET_PRODUCT)),)
+$(call inherit-product, vendor/gapps/x86/x86-vendor.mk)
+else
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+endif
 endif
 
 # Plugins
